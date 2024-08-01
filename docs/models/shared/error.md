@@ -1,0 +1,11 @@
+# Error
+
+
+## Fields
+
+| Field                                                               | Type                                                                | Required                                                            | Description                                                         | Example                                                             |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `code`                                                              | [::OpenApiSDK::Shared::Code](../../models/shared/code.md)           | :heavy_check_mark:                                                  | A machine readable error code.                                      | UNAUTHORIZED                                                        |
+| `docs`                                                              | *::String*                                                          | :heavy_check_mark:                                                  | A link to our documentation with more details about this error code | https://bannerify.co/docs/api-reference/errors/code/UNAUTHORIZED    |
+| `message`                                                           | *::String*                                                          | :heavy_check_mark:                                                  | A human readable explanation of what went wrong                     |                                                                     |
+| `request_id`                                                        | *::String*                                                          | :heavy_check_mark:                                                  | Please always include the requestId in your error report            | req:1234                                                            |

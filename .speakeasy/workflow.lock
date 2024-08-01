@@ -1,0 +1,27 @@
+speakeasyVersion: 1.346.0
+sources:
+    bannerify-OAS:
+        sourceNamespace: bannerify-oas
+        sourceRevisionDigest: sha256:693cd74f198b7b7ddf75935e435b91b938c8e3052304b67b927fb91a3f1acc10
+        sourceBlobDigest: sha256:2e5428d2eb0e7c0622abb808ece864ce6a41308522c19dfc1964648df6a313f4
+        tags:
+            - latest
+targets:
+    bannerify:
+        source: bannerify-OAS
+        sourceNamespace: bannerify-oas
+        sourceRevisionDigest: sha256:693cd74f198b7b7ddf75935e435b91b938c8e3052304b67b927fb91a3f1acc10
+        sourceBlobDigest: sha256:2e5428d2eb0e7c0622abb808ece864ce6a41308522c19dfc1964648df6a313f4
+        outLocation: /Users/anduc/projects/bannerify-ruby
+workflow:
+    workflowVersion: 1.0.0
+    sources:
+        bannerify-OAS:
+            inputs:
+                - location: https://api.bannerify.co/openapi
+            registry:
+                location: registry.speakeasyapi.dev/bannerify/bannerify/bannerify-oas
+    targets:
+        bannerify:
+            target: ruby
+            source: bannerify-OAS
